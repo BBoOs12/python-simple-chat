@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Εγγραφή</title>
+  <style>
+    body { font-family: Arial; background: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    form { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    input { display: block; width: 100%; margin-bottom: 15px; padding: 10px; font-size: 16px; }
+    button { background: #2196F3; color: white; padding: 10px; font-size: 16px; border: none; cursor: pointer; width: 100%; }
+    button:hover { background: #1976D2; }
+    a { color: #2196F3; text-decoration: none; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <form method="POST">
+    <h2>Εγγραφή</h2>
+    <input name="username" placeholder="Username" required>
+    <input name="password" type="password" placeholder="Password" required>
+    <button type="submit">Δημιουργία Λογαριασμού</button>
+    <p>Έχεις ήδη λογαριασμό; <a href="/login">Σύνδεση</a></p>
+  </form>
+</body>
+</html>

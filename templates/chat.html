@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <h3>Καλώς ήρθες, {{ username }}!</h3>
+      <a href="/logout">Αποσύνδεση</a>
+    </div>
+    <ul id="messages">
+      {% for msg in messages %}
+        <li><span class="time">[{{ msg[2] }}]</span> <strong>{{ msg[0] }}:</strong> {{ msg[1] }}</li>
+      {% endfor %}
+    </ul>
+    <form id="form">
+      <input id="message" autocomplete="off" placeholder="Γράψε μήνυμα..." />
+      <button>Αποστολή</button>
+    </form>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
